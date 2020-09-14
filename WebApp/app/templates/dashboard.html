@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block content %}
+<head>
+    <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    </style>
+    </head>
+<h2>Here is the relation between the entities: </h2>
+<table style="width:100%">
+    <tr>
+       <th>Sentences</th>
+       <th>Entity One</th>
+       <th>Entity Two</th> 
+       <th>Relation</th>
+       <th>Teacher's Name</th>
+    </tr>
+    {% for sentence in sentences %}
+            <tr>
+                <td>{{ sentence.sentence }}</td>
+                <td>{{ sentence.entity_1 }}</td>
+                <td>{{ sentence.entity_2 }}</td>
+                <td>{{ sentence.relation }}</td>
+                <td>{{ sentence.author }}</td>
+            </tr>
+    {% endfor %}
+</table>
+{% endblock content %}

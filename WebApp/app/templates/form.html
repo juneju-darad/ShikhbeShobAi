@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+<body>
+    <h2>Paste your paragraph!</h2>
+    <p>This is a multi-line input field</p>
+    
+    <form method="POST"">
+        <textarea name="text" rows="20" cols="100"></textarea>
+        <!-- <input name="text"> -->
+        <input type="submit">
+    </form>
+    
+</body>
+{% endblock content %}

@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+<article class="media content-section">
+    <div class="media-body">
+      <p class="article-content">{{ text }}</p>
+    </div>
+  </article>
+    {% for post in posts %}
+    <article class="media content-section">
+        <div class="media-body">
+          <div class="article-metadata">
+            <a class="mr-2" href="#">{{ current_user.username }}</a>
+          </div>
+          <h2><a class="article-title">{{ post.question }}</a></h2>
+          <p class="article-content">{{ post.answer}}</p>
+        </div>
+      </article>
+    {% endfor %}
+{% endblock content %}

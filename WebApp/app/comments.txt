@@ -1,0 +1,30 @@
+<a class="nav-item nav-link" href="{{ url_for('dashboard') }}">Dashboard</a>
+
+# @app.route('/dashboard')
+# def dashboard():
+#     sentences = Sentence.query.all()
+#     return render_template('dashboard.html',sentences = sentences)
+
+# sentences = [
+#     {
+#         'author':'ডঃ নাবিল মোহাম্মেদ',
+#         'sentence':'সে একজন ছাত্র',
+#         'entity_1': 'সে',
+#         'entity_2' : 'ছাত্র',
+#         'relation': 'is_a'
+#     },
+#     {
+#         'author':'ডঃ নুর আলম',
+#         'sentence':'রহিম ম্যাচটি জিতেছে',
+#         'entity_1': 'রহিম',
+#         'entity_2' : 'ম্যাচটি',
+#         'relation': 'job_done'
+#     },
+#     {
+#         'author':'আবদুল মালেক',
+#         'sentence':'তার একটি বাড়ি আছে',
+#         'entity_1': 'তার',
+#         'entity_2' : 'একটি বাড়ি',
+#         'relation': 'has_a'
+#     }
+# ]

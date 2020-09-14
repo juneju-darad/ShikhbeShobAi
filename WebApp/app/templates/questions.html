@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% for sentence in sentences %}
+    
+        <article class="media content-section">
+          
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ sentence.author.username }}</a>
+            </div>
+            <h2><a class="article-title" href="{{ url_for('sentence',sentence_id=sentence.id) }}">{{ sentence.question }}</a></h2>
+            <p class="article-content">{{ sentence.answer }}</p>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
